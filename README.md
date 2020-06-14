@@ -1,36 +1,16 @@
 # clojure-play
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
+Just some basic example of clojure that I'm playing with.  I want to keep make sure everything I've played with has unit tests as well, so have a mini project is good for that.
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar clojure-play-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+```bash
+lein test && lein run
+```
 
 ## License
 
-Copyright © 2020 FIXME
+Copyright © 2020 Trenton D. Adams
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
