@@ -27,7 +27,8 @@
    {:name "left-achilles" :size 1}
    {:name "left-foot" :size 2}])
 
-(defn matching-part
+(defn match-part
+  "Copies a left part into a right part if it's a left part, and leaves it the way it is otherwise "
   [part]
   {:name (clojure.string/replace (:name part) #"^left-" "right-")
    :size (:size part)})
@@ -42,4 +43,4 @@
       (let [[part & remaining] remaining-asym-parts]
         (recur remaining
           (into final-body-parts
-            (set [part (matching-part part)])))))))
+            (set [part (match-part part)])))))))
