@@ -30,6 +30,22 @@
     )
   )
 
+(deftest should-have-correct-hobbit-parts-2
+  (testing "Should have left and right shoulder size 3"
+    (is (some (has-left-shoulder-size-3)
+          (better-symmetrize-body-parts asym-hobbit-body-parts))
+      "should have left parts")
+    (is (some (has-right-shoulder-size-3)
+          (better-symmetrize-body-parts asym-hobbit-body-parts))
+      "should have right parts"
+      )
+    (is (some (has-head-size-3)
+          (symmetrize-body-parts asym-hobbit-body-parts))
+      "should have non left/right parts"
+      )
+    )
+  )
+
 ; this is used in the asym-hobbit-body-parts, testing it separately
 ; ensures we know the reason for asym-hobbit-body-parts not working
 (deftest should-duplicate-left-to-right

@@ -44,3 +44,15 @@
         (recur remaining
           (into final-body-parts
             (set [part (match-part part)])))))))
+
+(defn better-symmetrize-body-parts
+  "Expects a seq of maps that have a :name and :size"
+  [asym-body-parts]
+  (reduce (fn [final-body-parts part]
+            (do
+              ;(println (str "called on " final-body-parts " " part))
+              (into final-body-parts
+                (set [part (match-part part)]))))
+    []
+    asym-body-parts)
+  )
