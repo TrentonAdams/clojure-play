@@ -9,6 +9,16 @@
      :last-name  "Last Name",
      :birthdate  "1995-01-01"}))
 
+(def sortedPeople
+  (sort-by :last-name
+    [{:first-name "Clark",
+      :last-name  "Kent",
+      :birthdate  "1995-01-01"}
+     {:first-name "Curious",
+      :last-name  "George",
+      :birthdate  "1995-01-01"}])
+  )
+
 (testing "is-name should keep names only"
   (is
     (and
@@ -18,3 +28,18 @@
     )
   )
 
+
+(testing "Clark Kent should be second element"
+  (is
+    (= "Kent"
+      (:last-name
+        (second
+          (sort-by :last-name
+            [{:first-name "Clark",
+              :last-name  "Kent",
+              :birthdate  "1995-01-01"}
+             {:first-name "Curious",
+              :last-name  "George",
+              :birthdate  "1995-01-01"}]))))
+    )
+  )
