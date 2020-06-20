@@ -5,6 +5,8 @@
 ; It's from chapter 3 "Do Things".
 ; https://www.braveclojure.com/do-things/
 ; I highly recommend buying the book, if you're planning on learning Clojure.
+; I also recommend not read this unless you have trouble building the functions
+; with unit tests, but instead do it yourself.
 
 (def asym-hobbit-body-parts
   [{:name "head" :size 3}
