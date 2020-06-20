@@ -3,15 +3,17 @@
             [brave-and-true-exercises.brave-and-true :refer :all])
   )
 
-(testing "Should have names only"
+(def namesOnly
+  (filter is-name
+    {:first-name "First Name",
+     :last-name  "Last Name",
+     :birthdate  "1995-01-01"}))
+
+(testing "is-name should keep names only"
   (is
-    (def result (filter is-name
-                  {:first-name "First Name",
-                   :last-name  "Last Name",
-                   :birthdate  "1995-01-01"}))
     (and
-      (= 2 (count result))
-      (every? is-name result)
+      (= 2 (count namesOnly))
+      (every? is-name namesOnly)
       )
     )
   )
