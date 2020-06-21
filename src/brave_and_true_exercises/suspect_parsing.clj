@@ -1,13 +1,5 @@
-(ns brave-and-true-exercises.brave-and-true
+(ns brave-and-true-exercises.suspect-parsing
   (:gen-class))
-
-
-
-
-
-
-
-
 
 (def filename "suspects.csv")
 

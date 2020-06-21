@@ -1,6 +1,6 @@
-(ns brave-and-true-exercises.brave-and-true-test
+(ns brave-and-true-exercises.suspect-parsing-test
   (:require [clojure.test :refer :all]
-            [brave-and-true-exercises.brave-and-true :refer :all])
+            [brave-and-true-exercises.suspect-parsing :refer :all])
   )
 
 (deftest fwpd-tests
