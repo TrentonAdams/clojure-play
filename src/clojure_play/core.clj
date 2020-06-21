@@ -12,6 +12,12 @@
   )
 (def names ["Pan" "Peter" "Mouse" "Mickey"])
 
+(defn is-name
+  "filters names (*-name)"
+  [item]
+  (re-matches #"^.*-name$" (str (first item)) )
+  )
+
 (defn -main
   "main entry"
   [& args]
