@@ -9,27 +9,18 @@
      :last-name  "Last Name",
      :birthdate  "1995-01-01"}))
 
-(def sortedPeople
-  (sort-by :last-name
-    [{:first-name "Clark",
-      :last-name  "Kent",
-      :birthdate  "1995-01-01"}
-     {:first-name "Curious",
-      :last-name  "George",
-      :birthdate  "1995-01-01"}])
-  )
-
-(testing "is-name should keep names only"
+(deftest should-filter-names-only
+  (testing "is-name should keep names only"
   (is
     (and
       (= 2 (count namesOnly))
       (every? is-name namesOnly)
       )
     )
-  )
+  ))
 
-
-(testing "Clark Kent should be second element"
+(deftest should-order-by-last-name 
+  (testing "Clark Kent should be second element"
   (is
     (= "Kent"
       (:last-name
@@ -40,6 +31,9 @@
               :birthdate  "1995-01-01"}
              {:first-name "Curious",
               :last-name  "George",
-              :birthdate  "1995-01-01"}]))))
+              :birthdate  "1995-01-01"}])
+          )
+        )
+      )
     )
-  )
+  ))
